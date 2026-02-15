@@ -15,7 +15,7 @@ public class FenetreJeu extends JPanel implements ActionListener, KeyListener {
     private JFrame frame;
     private Joueur player;
     private int choice;
-    ArrayList<String> manoirs = new ArrayList<>(Arrays.asList("manoir1.txt", "manoir2.txt", "manoir3.txt"));
+    ArrayList<String> manoirs = new ArrayList<>(Arrays.asList("src/manoir1.txt", "src/manoir2.txt", "src/manoir3.txt"));
 
     JButton manoir1 = new JButton("niveau 1");
     JButton manoir2 = new JButton("niveau 2");
@@ -181,13 +181,13 @@ public class FenetreJeu extends JPanel implements ActionListener, KeyListener {
 
                     if (c instanceof Hall) {
                         if (((Hall) c).hasKey()) {
-                            Image imgKey = new ImageIcon("key.png").getImage();
+                            Image imgKey = new ImageIcon("src/key.png").getImage();
                             g.drawImage(imgKey, visibleCol * this.tailleCase, visibleLig * this.tailleCase , this);
 
                         }
 
                         if (((Hall) c).hasPotion()) {
-                            Image imgPotion = new ImageIcon("potion-blue.png").getImage();
+                            Image imgPotion = new ImageIcon("src/potion-blue.png").getImage();
                             g.drawImage(imgPotion, visibleCol * this.tailleCase, visibleLig * this.tailleCase, this);
                         }
 
@@ -195,7 +195,7 @@ public class FenetreJeu extends JPanel implements ActionListener, KeyListener {
 
                     if (c instanceof CaseTraversable) {
                         if (((CaseTraversable) c).hasPlayer()) {
-                            Image imgPlayer = new ImageIcon("silly_abomination.png").getImage();
+                            Image imgPlayer = new ImageIcon("src/silly_abomination.png").getImage();
                             g.drawImage(imgPlayer, visibleCol * this.tailleCase, visibleLig * this.tailleCase, this);
 
                         }
